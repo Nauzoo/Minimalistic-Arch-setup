@@ -2,13 +2,13 @@
 
 This is my minimalistic and terminal centered desktop configuration:
 
-![System screenshot] (/screenshots/screenshot1.png)
+![System screenshot](/screenshots/screenshot1.png)
 
-![System screenshot] (/screenshots/screenshot2.png)
+![System screenshot](/screenshots/screenshot2.png)
 
-![System screenshot] (/screenshots/screenshot3.png)
+![System screenshot](/screenshots/screenshot3.png)
 
-![System screenshot] (/screenshots/screenshot4.png)
+![System screenshot](/screenshots/screenshot4.png)
 
 Most of the files may work in other distros as well.
 
