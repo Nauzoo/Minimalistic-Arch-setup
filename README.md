@@ -16,6 +16,7 @@ You can copy some of the dotfiles, to save u some time ;D
 
 ### Softwares:
 >* Window-mannager : [Hyprland](https://github.com/hyprwm/Hyprland)
+>* Shell : [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 >* Statusbar : [Waybar](https://github.com/Alexays/Waybar)
 >* Code-editor : [Neovim](https://github.com/neovim/neovim)
 >* App-launcher : [Rofi](https://github.com/davatorium/rofi)
