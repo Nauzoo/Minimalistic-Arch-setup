@@ -2,7 +2,13 @@
 
 This is my minimalistic and terminal centered desktop configuration:
 
-![System screenshot] (./screenshot1.png)
+![System screenshot] (./screenshots/screenshot1.png)
+
+![System screenshot] (./screenshots/screenshot2.png)
+
+![System screenshot] (./screenshots/screenshot3.png)
+
+![System screenshot] (./screenshots/screenshot4.png)
 
 Most of the files may work in other distros as well.
 
@@ -14,7 +20,7 @@ You can copy some of the dotfiles, to save u some time ;D
 >* Code-editor : [Neovim](https://github.com/neovim/neovim)
 >* App-launcher : [Rofi](https://github.com/davatorium/rofi)
 >* Background : [swww](https://github.com/LGFae/swww)
->* Browser : [firefox]
+>* Browser : [firefox](https://www.mozilla.org/pt-BR/firefox/new/)
 >* File-mannager : [lf](github.com/gokcehan/lf)
 >* Notify-daemon : [Dunst](https://github.com/dunst-project/dunst)
 >* Terminal-emu: [Kitty](https://github.com/kovidgoyal/kitty)
