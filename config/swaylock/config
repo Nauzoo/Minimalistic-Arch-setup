@@ -1,0 +1,23 @@
+indicator
+clock
+screenshots
+indicator-radius=100
+indicator-thickness=7
+effect-blur=7x10
+effect-vignette=0.5:0.8
+fade-in=0.2
+font=Jet Brains Mono Nerd Font Mono
+
+ring-color=#74BAC3
+key-hl-color=#c9dddc
+line-color=#1f1f1c
+inside-color=#1f1f1c
+ring-ver-color=#74BAC3
+ring-clear-color=#74BAC3
+ring-wrong-color=#74BAC3
+inside-ver-color=#1f1f1c
+inside-clear-color=#1f1f1c
+inside-wrong-color=#1f1f1c
+text-ver-color=#74BAC3
+text-clear-color=#74BAC3
+text-wrong-color=#74BAC3

@@ -1,0 +1,249 @@
+@import url("/home/nauzoo/.cache/wal/colors-waybar.css");
+
+@define-color mainIcons @color12;
+@define-color secIcons @color11;
+@define-color thirIcons @color15;
+@define-color regionBg @background;
+
+* {
+    	border: none;
+    	/*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
+    	font-family: JetBrainsMonoNerdFontMono;
+    	font-size: 14px;
+    	font-style: normal;
+    	min-height: 0;
+}
+
+window#waybar {
+	background-color: transparent;
+    border-radius: 8px;
+	border-bottom: 0px solid #282828;
+}
+
+#workspaces, #custom-playerctl, #custom-playerlabel, #cpu, #temperature, #memory,
+#backlight, #battery, #clock, #custom-launcher, #network, #pulseaudio, #bluetooth {
+	background-color: @regionBg; /*#282828*/
+	border-radius: 15px;
+	margin: 5px 5px 5px 5px;
+	padding: 3px;
+
+}
+
+#workspaces {
+    border-radius: 0px 15px 0px 0px;
+    margin: 5px 5px 5px 0px;
+}
+#workspaces button {
+	color: #ababab;
+	background: none;
+	border: none;
+}
+
+#workspaces button.active {
+	color: @mainIcons;
+	background: inherit;
+}
+
+#workspaces button:hover {
+	background: inherit;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+#custom-date, #custom-randwall {
+	background: transparent;
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+  	border-radius: 8px;
+  	border: solid 0px #f4d9e1;
+}
+
+#custom-date {
+	color: #D3869B;
+}
+
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
+}
+
+#tray {
+    	background: #282828;
+    	margin: 5px 5px 5px 5px;
+    	border-radius: 16px;
+	padding: 0px 5px;
+	/*border-right: solid 1px #282738;*/
+}
+
+#clock {
+        color: @mainIcons;
+    	/*background-color: transparent;
+    	border-radius: 0px 0px 0px 24px;*/
+    	padding-left: 15px;
+    	padding-right: 10px;
+    	margin-right: 10px;
+    	margin-left: 10px;
+    	margin-top: 0px;
+    	margin-bottom: 0px;
+    	font-weight: bold;
+	font-size: 17px;
+	/*border-left: solid 1px #282738;*/
+}
+
+
+#battery {
+    	color: @thirIcons;
+        border-radius: 0px 0px 15px 0px;
+        margin: 5px 5px 5px 0px;
+        padding-right: 10px;
+        padding-left: 5px;
+}
+
+#battery.charging {
+    	color: @thirIcons;
+}
+
+#battery.warning:not(.charging) {
+    	background-color: #f7768e;
+    	color: #24283b;
+}
+
+#backlight {
+    	/*background-color: transparent;*/
+    	color: @thirIcons;
+    	border-radius: 15px 0px 0px 0px;
+        margin: 5px 0px 5px 5px;
+    	padding: 5px 10px 5px 10px;
+}
+
+#network {
+    	color: @thirIcons;
+    	border-radius: 15px 0px 0px 15px;
+    	margin-right: 0px;
+        padding: 10px;
+}
+
+#bluetooth {
+    color: @thirIcons;
+    border-radius: 0px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#pulseaudio {
+    	color: @thirIcons;
+    	border-radius: 0px 15px 15px 0px;
+    	margin-left: 0px;
+        padding: 10px;
+}
+
+#pulseaudio.muted {
+    	color: #928374;
+    	border-radius: 0px 15px 15px 0px;
+}
+
+#custom-randwall {
+    	color: #f4d9e1;
+    	border-radius: 8px;
+    	margin-right: 0px;
+}
+
+#custom-launcher {
+    	color: @mainIcons;
+    	padding: 0 0px 0 15px;
+        border-radius: 0px 0px 0px 15px;
+    	/*border-right: solid 1px #282738;*/
+    	margin-right: 0px;
+        font-size: 30px;
+        font-weight: bold;
+}
+
+#custom-launcher button:hover {
+    	background-color: #FB4934;
+    	color: transparent;
+    	border-radius: 8px;
+    	margin-right: 5px;
+    	margin-left: 10px;
+}
+
+#custom-playerctl {
+	padding-left: 15px;
+  	padding-right: 15px;
+  	/*border-left: solid 1px #282738;*/
+  	/*border-right: solid 1px #282738;
+  	margin-top: 5px;
+  	margin-bottom: 5px;*/
+  	margin-left: 0px;
+	font-weight: normal;
+  	font-style: normal;
+  	font-size: 18px;
+}
+
+#custom-playerlabel {
+    	background: @regionBg;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	/*border-left: solid 1px #282738;*/
+    	/*border-right: solid 1px #282738;*/
+    	margin-top: 5px;
+    	margin-bottom: 5px;
+    	font-weight: normal;
+    	font-style: normal;
+        color: @mainIcons;
+}
+
+#custom-wf-recorder {
+    	padding: 0 20px;
+    	color: #e5809e;
+    	background-color: #1E1E2E;
+}
+
+#cpu {
+    	color: @secIcons;
+    	border-radius: 15px 0px 0px 15px;
+    	margin: 5px 0px 5px 5px;
+    	padding: 10px;
+    	font-weight: bold;
+}
+
+#temperature {
+	color: @secIcons;
+	border-radius: 0px 15px 15px 0px;
+	margin: 5px 5px 5px 0px;
+	padding: 10px;
+}
+
+#memory {
+    	color: @secIcons;
+    	padding: 0px 10px 0px 10px;
+    	font-weight: bold;
+}
+
+#disk {
+    	background-color: #282828;
+    	/*color: #8EC07C;*/
+    	border-radius: 16px;
+    	margin: 5px;
+    	margin-left: 5px;
+    	margin-right: 5px;
+    	padding: 0px 10px 0px 10px;
+    	font-weight: bold;
+}
+
+#custom-hyprpicker {
+    	background-color: #282828;
+    	/*color: #8EC07C;*/
+    	border-radius: 16px;
+    	margin: 5px;
+    	margin-left: 5px;
+    	margin-right: 5px;
+    	padding: 0px 11px 0px 9px;
+    	font-weight: bold;
+}

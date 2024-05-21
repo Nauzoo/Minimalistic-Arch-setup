@@ -1,0 +1,10 @@
+indicator
+clock
+screenshots
+indicator-radius=100
+indicator-thickness=7
+effect-blur=7x10
+effect-vignette=0.5:0.8
+fade-in=0.2
+font=Jet Brains Mono Nerd Font Mono
+
