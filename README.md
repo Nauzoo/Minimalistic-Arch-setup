@@ -35,4 +35,6 @@ You can copy some of the dotfiles, to save u some time ;D
 >* [pywal](https://github.com/dylanaraps/pywal) : for generating colorschemes
 >* [swappy](https://github.com/jtheoof/swappy) : for editing screenshots
 
-Please, let me know if any depencie was left behind.
+**Some of the files were made by other users and modified by me. All original creators are listed in their respective scripts. If any of the files have not been properly credited, please let me know.**
+
+Please, let me know if any depencies were left behind.
