@@ -2,18 +2,20 @@
 call plug#begin()
 Plug 'sainnhe/sonokai'
 Plug 'sainnhe/gruvbox-material'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'AlphaTechnolog/pywal.nvim', { 'as': 'pywal' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'dense-analysis/ale'
-Plug 'dylanaraps/wal.vim'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 
@@ -117,7 +119,7 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  " set termguicolors
+  set termguicolors
 endif
 
 let g:sonokai_style = 'andromeda'
@@ -130,17 +132,69 @@ let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_cursor = 'aqua'
 
-colorscheme wal
+
+colorscheme pywal
 
 if (has("nvim")) "transparent background. only for nvim
     highlight normal guibg=none ctermbg=none
     highlight endofbuffer guibg=none ctermbg=none
 endif
 
+" BUFFER LINE """""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+lua << EOF
+require("bufferline").setup{}
+EOF
+
+" LUALINE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'pywal-nvim',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
+EOF
+
 " AIRLINE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'wal'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'pywal'
+
 
 
 " NERD TREE """""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -161,13 +215,13 @@ let g:ale_fix_on_save = 1
 
 " TELESCOPE """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if (has("nvim"))
-    call plug#begin()
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    call plug#end()
+"if (has("nvim"))
+"    call plug#begin()
+"    Plug 'nvim-lua/plenary.nvim'
+"    Plug 'nvim-telescope/telescope.nvim'
+"    call plug#end()
 
-endif
+" endif
 
 if (has("nvim"))
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
